@@ -1,0 +1,33 @@
+<div class="mb-3">
+  <label for="nome" class="form-label">Front Image (url)</label>
+  <input type="text" *ngIf="this.pokemon" [(ngModel)]="this.pokemon.frontSprite" class="form-control" id="nome" >
+</div>
+
+<div class="mb-3">
+  <label for="nome" class="form-label">Nome</label>
+  <input type="text" *ngIf="this.pokemon" [(ngModel)]="this.pokemon.nome" class="form-control" id="nome" >
+</div>
+<div class="mb-3">
+  <label for="hp" class="form-label">Health points</label>
+  <input type="number" *ngIf="this.pokemon" class="form-control" [(ngModel)]="this.pokemon.hp" id="hp" >
+</div>
+<div class="mb-3">
+  <label for="hp" class="form-label">Attack</label>
+  <input type="number" *ngIf="this.pokemon" class="form-control" [(ngModel)]="this.pokemon.atk" id="hp" >
+</div>
+<div class="mb-3">
+  <label for="hp" class="form-label">Defense</label>
+  <input type="number" *ngIf="this.pokemon" class="form-control" [(ngModel)]="this.pokemon.def" id="hp" >
+</div>
+<div class="mb-3">
+  <label for="hp" class="form-label">Special attack</label>
+  <input type="number" *ngIf="this.pokemon" class="form-control" [(ngModel)]="this.pokemon.spAtk" id="hp" >
+</div>
+<div class="mb-3">
+  <label for="hp" class="form-label">Special defense</label>
+  <input type="number" *ngIf="this.pokemon" class="form-control" [(ngModel)]="this.pokemon.spDef" id="hp" >
+</div>
+<div class="mb-3">
+  <label for="hp" class="form-label">Speed</label>
+  <input type="number" *ngIf="this.pokemon" class="form-control" [(ngModel)]="this.pokemon.spd" id="hp" >
+</div>

@@ -1,0 +1,52 @@
+<div class="conteiner" *ngIf="this.pokemon">
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col">
+      <div class="card">
+        <div class="flex">
+          <img [src]="this.pokemon?.frontSprite" class="card-img-top"  alt="Poke-front-img">
+          <img [src]="this.pokemon?.backSprite" class="card-img-top"  alt="Poke-back-img">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title firt-uppercase">{{ this.pokemon?.nome | titlecase}}</h5>
+          <div class="types">
+            <span [class]="'background-color-'+this.pokemon.type1+' types-unic' + ' firt-uppercase '">
+              {{ this.pokemon.type1 | titlecase }}
+            </span>
+            <span *ngIf="this.pokemon.type2" [class]="'background-color-'+this.pokemon.type2+' types-unic' + ' firt-uppercase '">
+              {{ this.pokemon.type2 | titlecase }}
+            </span>
+          </div>
+          <hr>
+          <p class="card-text"></p>
+
+          <div class="conteiner-progress">
+            <label for="hp" class="text-decrease text-color-hp">Health points</label>
+            <div class="progress">
+              <div id="hp" class="progress-bar bg-success" role="progressbar" [style.width]="this.pokemon?.hp+'px'" [attr.aria-valuenow]=" this.pokemon?.hp " aria-valuemin="0" aria-valuemax="255"> {{ this.pokemon?.hp }} </div>
+            </div>
+            <label for="atk" class="text-decrease text-color-atk" >Attack</label>
+            <div class="progress">
+              <div id="atk" class="progress-bar bg-success" role="progressbar" [style.width]="this.pokemon?.atk+'px'" [attr.aria-valuenow]=" this.pokemon?.atk " aria-valuemin="0" aria-valuemax="255"> {{ this.pokemon?.atk }} </div>
+            </div>
+            <label for="def" class="text-decrease text-color-def">Defense</label>
+            <div class="progress">
+              <div id="def" class="progress-bar bg-success" role="progressbar" [style.width]="this.pokemon?.def+'px'" [attr.aria-valuenow]=" this.pokemon?.def " aria-valuemin="0" aria-valuemax="255"> {{this.pokemon?.def }} </div>
+            </div>
+            <label for="sp-atk" class="text-decrease text-color-sp-atk">Special attack</label>
+            <div class="progress">
+              <div id="sp-atk" class="progress-bar bg-success" role="progressbar" [style.width]="this.pokemon?.spAtk+'px'" [attr.aria-valuenow]=" this.pokemon?.spAtk " aria-valuemin="0" aria-valuemax="255"> {{ this.pokemon?.spAtk }} </div>
+            </div>
+            <label for="sp-def" class="text-decrease text-color-sp-def">Special defense</label>
+            <div class="progress">
+              <div id="sp-def" class="progress-bar bg-success" role="progressbar" [style.width]="this.pokemon?.spDef+'px'" [attr.aria-valuenow]=" this.pokemon?.spDef " aria-valuemin="0" aria-valuemax="255"> {{ this.pokemon?.spDef }} </div>
+            </div>
+            <label for="spd" class="text-decrease text-color-spd">Speed</label>
+            <div class="progress">
+              <div id="spd" class="progress-bar bg-success" role="progressbar" [style.width]="this.pokemon?.spd+'px'" [attr.aria-valuenow]=" this.pokemon?.spd " aria-valuemin="0" aria-valuemax="255"> {{ this.pokemon?.spd }} </div>
+            </div>
+          </div>
+        </div>
+        <button type="button" (click)="onEditPokemon()"  class="btn btn-success">Editar pokemon</button>
+      </div>
+    </div>
+</div>

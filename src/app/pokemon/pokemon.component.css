@@ -1,0 +1,9 @@
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ajuste{
+  width: 96px;
+  height: 96px;
+}

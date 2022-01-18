@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col flex space">
+      <div [routerLink]=" [elemento.id]" *ngFor="let elemento of this.array | paginate: {itemsPerPage: this.pokemonPerPage, currentPage: this.page}">
+        <div>
+          <img class="ajuste" [src]="elemento.frontSprite">
+        </div>
+    </div>
+
+    <div class="row">
+      <pagination-controls (pageChange)="this.page = $event"></pagination-controls>
+    </div>
+  </div>
+
+    <div class="col">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
